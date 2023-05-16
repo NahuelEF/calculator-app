@@ -1,0 +1,15 @@
+@use "mixins";
+
+.main {
+  width: 100%;
+  height: 100vh;
+  @include mixins.displayFlex($align: center, $justify: center);
+}
+
+.calculator {
+  width: 100%;
+  max-width: 550px;
+  padding: mixins.rem(28) mixins.rem(24);
+  border: 1px solid white;
+  border-radius: 5px;
+}

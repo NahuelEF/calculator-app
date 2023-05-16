@@ -1,0 +1,61 @@
+@use "mixins";
+
+.header {
+  width: 100%;
+  @include mixins.displayFlex($align: center, $justify: space-between);
+
+  &__title {
+    font-size: mixins.rem(32);
+  }
+}
+
+.theme {
+  @include mixins.displayFlex(
+    $align: center,
+    $justify: space-between,
+    $gap: 2rem
+  );
+
+  &__title {
+    margin: 5px 0;
+    align-self: flex-end;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: mixins.rem(14);
+  }
+}
+
+.toggle {
+  @include mixins.displayFlex(column, center, space-between);
+
+  $radius: mixins.rem(20);
+
+  &__container {
+    width: 100%;
+    padding: 5px;
+    @include mixins.displayFlex(
+      $align: center,
+      $justify: space-around,
+      $gap: 0.4rem
+    );
+
+    &--bg {
+      background-color: var(--bg-toggle-very-dark-desaturated-blue);
+      border-radius: $radius;
+      overflow: hidden;
+    }
+  }
+
+  &__label {
+    font-size: mixins.rem(14);
+  }
+
+  &__radio {
+    width: $radius;
+    height: $radius;
+    border-radius: 50%;
+    &:checked {
+      background-color: var(--bg-key-red);
+    }
+  }
+}

@@ -118,9 +118,10 @@ svg {
 
 body {
   min-height: 100vh;
+  background-color: var(--bg-main-very-dark-desaturated-blue);
   font-size: 100%;
   font-family: var(--primary-font-family);
-  color: var(--txt-very-dark-grayish-blue);
+  color: var(--txt-white);
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
