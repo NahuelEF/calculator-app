@@ -1,0 +1,147 @@
+:root {
+  /* Colors - Theme 1*/
+  --bg-main-very-dark-desaturated-blue: hsl(222, 26%, 31%);
+  --bg-toggle-very-dark-desaturated-blue: hsl(223, 31%, 20%);
+  --bg-screen-very-dark-desaturated-blue: hsl(224, 36%, 15%);
+  --bg-key-desaturated-dark-blue: hsl(225, 21%, 49%);
+  --shadow-key-desaturated-dark-blue: hsl(224, 28%, 35%);
+  --bg-key-red: hsl(6, 63%, 50%);
+  --shadow-key-dark-red: hsl(6, 70%, 34%);
+  --bg-key-light-grayish-orange: hsl(30, 25%, 89%);
+  --shadow-key-grayish-orange: hsl(28, 16%, 65%);
+  --txt-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --txt-white: hsl(0, 0%, 100%);
+  /* Typography */
+  --primary-font-family: "League Spartan", sans-serif;
+  --normal-weight: 700;
+}
+
+/* --- RESET --- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before,
+*::after {
+  display: block;
+}
+
+img,
+picture,
+video,
+iframe,
+figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+strong,
+blockquote,
+i,
+b,
+u,
+em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form,
+input,
+textarea,
+select,
+button,
+label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  appearance: none;
+}
+
+table,
+tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--primary-font-family);
+  color: var(--txt-very-dark-grayish-blue);
+  hyphens: auto;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*# sourceMappingURL=style.css.map */
