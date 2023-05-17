@@ -27,9 +27,7 @@
 
 .toggle {
   @include mixins.displayFlex(column, center, space-between);
-
   $radius: mixins.rem(20);
-
   &__container {
     width: 100%;
     padding: 5px;
@@ -54,6 +52,8 @@
     width: $radius;
     height: $radius;
     border-radius: 50%;
+    cursor: pointer;
+
     &:checked {
       background-color: var(--bg-key-red);
     }
