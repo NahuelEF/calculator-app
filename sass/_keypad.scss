@@ -12,6 +12,22 @@
   gap: mixins.rem(24);
 
   &__number,
+  &__delete,
+  &__operator,
+  &__decimal,
+  &__reset,
+  &__equal {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+  }
+
+  &__number,
   &__operator,
   &__decimal {
     @include mixins.key(
@@ -31,6 +47,7 @@
     );
     text-transform: uppercase;
   }
+
   &__reset {
     grid-column: 1/3;
     grid-row: 5;

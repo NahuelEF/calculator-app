@@ -235,41 +235,29 @@ body {
   justify-items: center;
   gap: 1.5rem;
 }
-.keys__number, .keys__operator, .keys__decimal {
+.keys__number, .keys__delete, .keys__operator, .keys__decimal, .keys__reset, .keys__equal {
   width: 100%;
   height: 100%;
   border-radius: 10px;
   padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+.keys__number, .keys__operator, .keys__decimal {
   background-color: var(--bg-key-light-grayish-orange);
   color: var(--txt-very-dark-grayish-blue);
   box-shadow: inset 0 -0.3rem 0 var(--shadow-key-grayish-orange);
   font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.2s;
-  /* &:hover {
-    background-color: change-color($color: rgb(255, 48, 48), $alpha: 0.1);
-  } */
+  font-weight: var(--normal-weight);
 }
 .keys__delete, .keys__reset {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 1rem;
   background-color: var(--bg-key-desaturated-dark-blue);
   color: var(--txt-white);
   box-shadow: inset 0 -0.3rem 0 var(--shadow-key-desaturated-dark-blue);
   font-size: 1.5rem;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.2s;
-  /* &:hover {
-    background-color: change-color($color: rgb(255, 48, 48), $alpha: 0.1);
-  } */
+  font-weight: var(--normal-weight);
   text-transform: uppercase;
 }
 .keys__reset {
@@ -277,24 +265,29 @@ body {
   grid-row: 5;
 }
 .keys__equal {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  padding: 1rem;
   background-color: var(--bg-key-red);
   color: var(--txt-white);
   box-shadow: inset 0 -0.3rem 0 var(--shadow-key-dark-red);
   font-size: 2rem;
-  font-weight: 700;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  transition: background-color 0.2s;
-  /* &:hover {
-    background-color: change-color($color: rgb(255, 48, 48), $alpha: 0.1);
-  } */
+  font-weight: var(--normal-weight);
   grid-column: 3/5;
   grid-row: 5;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  padding: 2rem;
+  font-size: 1rem;
+}
+.attribution__link {
+  font-style: italic;
+}
+.attribution__link:hover {
+  text-decoration: 4px underline var(--bg-key-red);
 }
 
 /*# sourceMappingURL=style.css.map */
