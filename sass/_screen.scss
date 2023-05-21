@@ -1,6 +1,6 @@
 @use "mixins";
 
-.screen{
+.screen {
   width: 100%;
   height: mixins.rem(93);
   padding: 2rem;
@@ -8,4 +8,5 @@
   background-color: var(--bg-screen-very-dark-desaturated-blue);
   text-align: end;
   font-size: mixins.rem(32);
+  outline: none;
 }

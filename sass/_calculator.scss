@@ -1,0 +1,6 @@
+@use "mixins";
+
+.calculator {
+  width: 100%;
+  @include mixins.displayFlex(column, center, center, 2rem);
+}

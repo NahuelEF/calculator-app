@@ -25,7 +25,7 @@
   </head>
   <body>
     <main class="main">
-      <div class="calculator">
+      <div class="container">
         <div class="header">
           <h1 class="header__title">calc</h1>
           <div class="theme">
@@ -60,30 +60,32 @@
             </form>
           </div>
         </div>
-        <div class="screen">0</div>
-        <div class="keys">
-          <button class="keys__number" type="button">7</button>
-          <button class="keys__number" type="button">8</button>
-          <button class="keys__number" type="button">9</button>
-          <button class="keys__delete" type="button">del</button>
-          <button class="keys__number" type="button">4</button>
-          <button class="keys__number" type="button">5</button>
-          <button class="keys__number" type="button">6</button>
-          <button class="keys__operator" type="button">+</button>
-          <button class="keys__number" type="button">1</button>
-          <button class="keys__number" type="button">2</button>
-          <button class="keys__number" type="button">3</button>
-          <button class="keys__operator" type="button">-</button>
-          <button class="keys__decimal" type="button">.</button>
-          <button class="keys__number" type="button">0</button>
-          <button class="keys__operator" type="button">/</button>
-          <button class="keys__operator" type="button">x</button>
-          <button class="keys__reset" type="button">reset</button>
-          <button class="keys__equal" type="button">=</button>
-        </div>
+        <form class="calculator">
+          <input class="screen" type="text" placeholder="0" readonly />
+          <fieldset class="keys">
+            <button class="keys__number" type="button">7</button>
+            <button class="keys__number" type="button">8</button>
+            <button class="keys__number" type="button">9</button>
+            <button class="keys__delete" type="button">del</button>
+            <button class="keys__number" type="button">4</button>
+            <button class="keys__number" type="button">5</button>
+            <button class="keys__number" type="button">6</button>
+            <button class="keys__operator" type="button">+</button>
+            <button class="keys__number" type="button">1</button>
+            <button class="keys__number" type="button">2</button>
+            <button class="keys__number" type="button">3</button>
+            <button class="keys__operator" type="button">-</button>
+            <button class="keys__decimal" type="button">.</button>
+            <button class="keys__number" type="button">0</button>
+            <button class="keys__operator" type="button">/</button>
+            <button class="keys__operator" type="button">*</button>
+            <button class="keys__reset" type="reset">reset</button>
+            <button class="keys__equal" type="button">=</button>
+          </fieldset>
+        </form>
       </div>
     </main>
-     <footer class="footer">
+    <footer class="footer">
       <p class="attribution">
         Challenge by
         <a
@@ -104,5 +106,6 @@
         >.
       </p>
     </footer>
+    <script src="../app.js"></script>
   </body>
 </html>

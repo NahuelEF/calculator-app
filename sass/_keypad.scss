@@ -2,14 +2,15 @@
 
 .keys {
   width: 100%;
-  padding: 2rem;
+  padding: mixins.rem(32) mixins.rem(30);
   border-radius: 10px;
   background-color: var(--bg-toggle-very-dark-desaturated-blue);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   align-items: center;
   justify-items: center;
-  gap: mixins.rem(24);
+  gap: mixins.rem(25);
 
   &__number,
   &__delete,
