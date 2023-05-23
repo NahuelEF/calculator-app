@@ -1,22 +1,32 @@
+@use "mixins";
+
+$padding: mixins.rem(32);
+
 :root {
   /* Colors - Theme 1*/
-  --bg-main-very-dark-desaturated-blue: hsl(222, 26%, 31%);
-  --bg-toggle-very-dark-desaturated-blue: hsl(223, 31%, 20%);
-  --bg-screen-very-dark-desaturated-blue: hsl(224, 36%, 15%);
+  --bg-main-dark-blue: hsl(222, 26%, 31%);
+  --bg-keypad-dark-blue: hsl(223, 31%, 20%);
+  --bg-screen-dark-blue: hsl(224, 36%, 15%);
 
-  --bg-key-desaturated-dark-blue: hsl(225, 21%, 49%);
-  --shadow-key-desaturated-dark-blue: hsl(224, 28%, 35%);
+  --bg-key-dark-blue: hsl(225, 21%, 49%);
+  --shadow-key-dark-blue: hsl(224, 28%, 35%);
+  --hover-key-dark-blue: hsl(224, 51%, 76%);
 
   --bg-key-red: hsl(6, 63%, 50%);
-  --shadow-key-dark-red: hsl(6, 70%, 34%);
+  --shadow-key-red: hsl(6, 70%, 34%);
+  --hover-key-red: hsl(6, 93%, 67%);
 
-  --bg-key-light-grayish-orange: hsl(30, 25%, 89%);
+  --bg-key-grayish-orange: hsl(30, 25%, 89%);
   --shadow-key-grayish-orange: hsl(28, 16%, 65%);
+  --hover-key-grayish-orange: hsl(0, 0%, 100%);
 
-  --txt-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --txt-dark-blue: hsl(221, 14%, 31%);
   --txt-white: hsl(0, 0%, 100%);
 
   /* Typography */
   --primary-font-family: "League Spartan", sans-serif;
   --normal-weight: 700;
+
+  --padding-container: #{$padding};
+  --border-radius: 10px;
 }

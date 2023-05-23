@@ -13,12 +13,12 @@
   gap: $gap;
 }
 
-@mixin key($bg, $color, $shadow, $size: rem(32)) {
+@mixin key($bg, $color) {
   background-color: var(--bg-key-#{$bg});
   color: var(--txt-#{$color});
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-#{$shadow});
-  font: {
-    size: $size;
-    weight: var(--normal-weight);
+  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-#{$bg});
+
+  &:hover {
+    background-color: var(--hover-key-#{$bg});
   }
 }

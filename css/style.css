@@ -1,19 +1,24 @@
 :root {
   /* Colors - Theme 1*/
-  --bg-main-very-dark-desaturated-blue: hsl(222, 26%, 31%);
-  --bg-toggle-very-dark-desaturated-blue: hsl(223, 31%, 20%);
-  --bg-screen-very-dark-desaturated-blue: hsl(224, 36%, 15%);
-  --bg-key-desaturated-dark-blue: hsl(225, 21%, 49%);
-  --shadow-key-desaturated-dark-blue: hsl(224, 28%, 35%);
+  --bg-main-dark-blue: hsl(222, 26%, 31%);
+  --bg-keypad-dark-blue: hsl(223, 31%, 20%);
+  --bg-screen-dark-blue: hsl(224, 36%, 15%);
+  --bg-key-dark-blue: hsl(225, 21%, 49%);
+  --shadow-key-dark-blue: hsl(224, 28%, 35%);
+  --hover-key-dark-blue: hsl(224, 51%, 76%);
   --bg-key-red: hsl(6, 63%, 50%);
-  --shadow-key-dark-red: hsl(6, 70%, 34%);
-  --bg-key-light-grayish-orange: hsl(30, 25%, 89%);
+  --shadow-key-red: hsl(6, 70%, 34%);
+  --hover-key-red: hsl(6, 93%, 67%);
+  --bg-key-grayish-orange: hsl(30, 25%, 89%);
   --shadow-key-grayish-orange: hsl(28, 16%, 65%);
-  --txt-very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --hover-key-grayish-orange: hsl(0, 0%, 100%);
+  --txt-dark-blue: hsl(221, 14%, 31%);
   --txt-white: hsl(0, 0%, 100%);
   /* Typography */
   --primary-font-family: "League Spartan", sans-serif;
   --normal-weight: 700;
+  --padding-container: 2rem;
+  --border-radius: 10px;
 }
 
 /* --- RESET --- */
@@ -129,7 +134,7 @@ svg {
 
 body {
   min-height: 100vh;
-  background-color: var(--bg-main-very-dark-desaturated-blue);
+  background-color: var(--bg-main-dark-blue);
   font-size: 100%;
   font-family: var(--primary-font-family);
   color: var(--txt-white);
@@ -206,7 +211,7 @@ body {
   gap: 0.4rem;
 }
 .toggle__container--bg {
-  background-color: var(--bg-toggle-very-dark-desaturated-blue);
+  background-color: var(--bg-keypad-dark-blue);
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -218,27 +223,33 @@ body {
   height: 1.25rem;
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 .toggle__radio:checked {
   background-color: var(--bg-key-red);
 }
+.toggle__radio:checked:hover {
+  background-color: var(--hover-key-red);
+}
 
 .screen {
   width: 100%;
-  height: 5.8125rem;
-  padding: 2rem;
-  border-radius: 10px;
-  background-color: var(--bg-screen-very-dark-desaturated-blue);
+  padding: var(--padding-container);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-screen-dark-blue);
   text-align: end;
-  font-size: 2rem;
+  font-size: 4rem;
   outline: none;
+}
+.screen::placeholder {
+  color: var(--txt-dark-blue);
 }
 
 .keys {
   width: 100%;
-  padding: 2rem 1.875rem;
-  border-radius: 10px;
-  background-color: var(--bg-toggle-very-dark-desaturated-blue);
+  padding: var(--padding-container);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-keypad-dark-blue);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -249,27 +260,32 @@ body {
 .keys__number, .keys__delete, .keys__operator, .keys__decimal, .keys__reset, .keys__equal {
   width: 100%;
   height: 100%;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   padding: 1rem;
   text-align: center;
+  font-size: 2rem;
+  font-weight: var(--normal-weight);
   cursor: pointer;
   user-select: none;
   transition: background-color 0.2s;
 }
 .keys__number, .keys__operator, .keys__decimal {
-  background-color: var(--bg-key-light-grayish-orange);
-  color: var(--txt-very-dark-grayish-blue);
+  background-color: var(--bg-key-grayish-orange);
+  color: var(--txt-dark-blue);
   box-shadow: inset 0 -0.3rem 0 var(--shadow-key-grayish-orange);
-  font-size: 2rem;
-  font-weight: var(--normal-weight);
+}
+.keys__number:hover, .keys__operator:hover, .keys__decimal:hover {
+  background-color: var(--hover-key-grayish-orange);
 }
 .keys__delete, .keys__reset {
-  background-color: var(--bg-key-desaturated-dark-blue);
+  background-color: var(--bg-key-dark-blue);
   color: var(--txt-white);
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-desaturated-dark-blue);
-  font-size: 1.5rem;
-  font-weight: var(--normal-weight);
+  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-dark-blue);
   text-transform: uppercase;
+  font-size: 1.5rem;
+}
+.keys__delete:hover, .keys__reset:hover {
+  background-color: var(--hover-key-dark-blue);
 }
 .keys__reset {
   grid-column: 1/3;
@@ -278,11 +294,12 @@ body {
 .keys__equal {
   background-color: var(--bg-key-red);
   color: var(--txt-white);
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-dark-red);
-  font-size: 2rem;
-  font-weight: var(--normal-weight);
+  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-red);
   grid-column: 3/5;
   grid-row: 5;
+}
+.keys__equal:hover {
+  background-color: var(--hover-key-red);
 }
 
 .footer {

@@ -28,6 +28,7 @@
 .toggle {
   @include mixins.displayFlex(column, center, space-between);
   $radius: mixins.rem(20);
+
   &__container {
     width: 100%;
     padding: 5px;
@@ -38,7 +39,7 @@
     );
 
     &--bg {
-      background-color: var(--bg-toggle-very-dark-desaturated-blue);
+      background-color: var(--bg-keypad-dark-blue);
       border-radius: $radius;
       overflow: hidden;
     }
@@ -53,9 +54,14 @@
     height: $radius;
     border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.2s;
 
     &:checked {
       background-color: var(--bg-key-red);
+
+      &:hover {
+        background-color: var(--hover-key-red);
+      }
     }
   }
 }
