@@ -2,12 +2,19 @@
 
 .screen {
   width: 100%;
-  padding: var(--padding-container);
+  padding: var(--desktop-padding-container);
   border-radius: var(--border-radius);
   background-color: var(--bg-screen);
   text-align: end;
   font-size: mixins.rem(64);
   outline: none;
+
+  @include mixins.mediaQuery() {
+    padding: {
+      right: var(--mobile-padding-container);
+      left: var(--mobile-padding-container);
+    }
+  }
 }
 
 @include mixins.themes() {

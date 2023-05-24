@@ -17,8 +17,9 @@
   /* Typography */
   --primary-font-family: "League Spartan", sans-serif;
   --normal-weight: 700;
-  --padding-container: 2rem;
   --border-radius: 10px;
+  --desktop-padding-container: 2rem;
+  --mobile-padding-container: 1.5rem;
 }
 
 .theme2 {
@@ -194,7 +195,7 @@ body {
 .container {
   width: 100%;
   max-width: 550px;
-  padding: 1.75rem 1.5rem;
+  margin: 1.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,12 +282,18 @@ body {
 
 .screen {
   width: 100%;
-  padding: var(--padding-container);
+  padding: var(--desktop-padding-container);
   border-radius: var(--border-radius);
   background-color: var(--bg-screen);
   text-align: end;
   font-size: 4rem;
   outline: none;
+}
+@media screen and (max-width: 425px) {
+  .screen {
+    padding-right: var(--mobile-padding-container);
+    padding-left: var(--mobile-padding-container);
+  }
 }
 
 .theme2 .screen {
@@ -299,12 +306,12 @@ body {
 
 .keys {
   width: 100%;
-  padding: var(--padding-container);
+  padding: var(--desktop-padding-container);
   border-radius: var(--border-radius);
   background-color: var(--bg-keypad);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 66px);
   align-items: center;
   justify-items: center;
   gap: 1.5625rem;
@@ -313,7 +320,6 @@ body {
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
-  padding: 1rem;
   text-align: center;
   font-size: 2rem;
   font-weight: var(--normal-weight);
@@ -358,6 +364,12 @@ body {
 .keys__equal:hover {
   background-color: var(--tertiary-hover-key);
 }
+@media screen and (max-width: 425px) {
+  .keys {
+    padding: var(--mobile-padding-container);
+    gap: 0.8125rem;
+  }
+}
 
 .theme3 .keys__equal {
   color: var(--tertiary-txt);
@@ -378,8 +390,19 @@ body {
 .attribution__link:hover {
   text-decoration: 4px underline var(--tertiary-bg-key);
 }
+.attribution br {
+  display: none;
+}
+@media screen and (max-width: 425px) {
+  .attribution br {
+    display: inline;
+  }
+}
 
-.theme2 .attribution,
+.theme2 .attribution {
+  color: var(--secondary-txt);
+}
+
 .theme3 .attribution {
   color: var(--secondary-txt);
 }

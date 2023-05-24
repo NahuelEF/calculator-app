@@ -1,6 +1,7 @@
 @use "mixins";
 
-$padding: mixins.rem(32);
+$desktop-padding: mixins.rem(32);
+$mobile-padding: mixins.rem(24);
 
 :root {
   /* Colors - Theme 1 */
@@ -27,8 +28,9 @@ $padding: mixins.rem(32);
   --primary-font-family: "League Spartan", sans-serif;
   --normal-weight: 700;
 
-  --padding-container: #{$padding};
   --border-radius: 10px;
+  --desktop-padding-container: #{$desktop-padding};
+  --mobile-padding-container: #{$mobile-padding};
 }
 
 .theme2 {

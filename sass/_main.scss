@@ -9,6 +9,6 @@
 .container {
   width: 100%;
   max-width: 550px;
-  padding: mixins.rem(28) mixins.rem(24);
+  margin: mixins.rem(28) mixins.rem(24);
   @include mixins.displayFlex(column, center, initial, 2rem);
 }
