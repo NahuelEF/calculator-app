@@ -39,7 +39,7 @@
     );
 
     &--bg {
-      background-color: var(--bg-keypad-dark-blue);
+      background-color: var(--bg-keypad);
       border-radius: $radius;
       overflow: hidden;
     }
@@ -57,11 +57,17 @@
     transition: background-color 0.2s;
 
     &:checked {
-      background-color: var(--bg-key-red);
+      background-color: var(--tertiary-bg-key);
 
       &:hover {
-        background-color: var(--hover-key-red);
+        background-color: var(--tertiary-hover-key);
       }
     }
+  }
+}
+
+@include mixins.themes() {
+  .header {
+    color: var(--secondary-txt);
   }
 }

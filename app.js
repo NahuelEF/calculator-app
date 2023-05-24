@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll("button");
 const screen = document.querySelector(".screen");
+const themes = document.querySelectorAll("input[name='theme']");
+const body = document.querySelector("body");
 
 buttons.forEach((key) => {
   key.addEventListener("click", () => {
@@ -28,5 +30,11 @@ buttons.forEach((key) => {
         screen.value += keyValue;
         break;
     }
+  });
+});
+
+themes.forEach((theme) => {
+  theme.addEventListener("click", () => {
+    body.classList.replace(`${body.className}`, `${theme.id}`);
   });
 });

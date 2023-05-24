@@ -4,12 +4,14 @@
   width: 100%;
   padding: var(--padding-container);
   border-radius: var(--border-radius);
-  background-color: var(--bg-screen-dark-blue);
+  background-color: var(--bg-screen);
   text-align: end;
   font-size: mixins.rem(64);
   outline: none;
+}
 
-  &::placeholder {
-    color: var(--txt-dark-blue);
+@include mixins.themes() {
+  .screen {
+    color: var(--secondary-txt);
   }
 }

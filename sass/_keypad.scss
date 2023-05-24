@@ -4,7 +4,7 @@
   width: 100%;
   padding: var(--padding-container);
   border-radius: var(--border-radius);
-  background-color: var(--bg-keypad-dark-blue);
+  background-color: var(--bg-keypad);
   display: grid;
   grid-template: {
     columns: repeat(4, 1fr);
@@ -31,18 +31,24 @@
     }
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.2s;
+    transition: 0.2s;
+
+    &:active {
+      height: 95%;
+      box-shadow: none;
+      align-self: flex-end;
+    }
   }
 
   &__number,
   &__operator,
   &__decimal {
-    @include mixins.key(grayish-orange, dark-blue);
+    @include mixins.key(primary, secondary);
   }
 
   &__delete,
   &__reset {
-    @include mixins.key(dark-blue, white);
+    @include mixins.key(secondary, primary);
     text-transform: uppercase;
     font-size: mixins.rem(24);
   }
@@ -55,10 +61,16 @@
   }
 
   &__equal {
-    @include mixins.key(red, white);
+    @include mixins.key(tertiary, primary);
     grid: {
       column: 3/5;
       row: 5;
     }
+  }
+}
+
+.theme3 {
+  .keys__equal {
+    color: var(--tertiary-txt);
   }
 }

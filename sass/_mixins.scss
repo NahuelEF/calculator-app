@@ -1,5 +1,7 @@
 @use "sass:math";
 
+$themes: 2, 3;
+
 @function rem($px) {
   $size: math.div($px, 16);
   @return #{$size}rem;
@@ -14,11 +16,19 @@
 }
 
 @mixin key($bg, $color) {
-  background-color: var(--bg-key-#{$bg});
-  color: var(--txt-#{$color});
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-#{$bg});
+  background-color: var(--#{$bg}-bg-key);
+  color: var(--#{$color}-txt);
+  box-shadow: inset 0 -0.3rem 0 var(--#{$bg}-shadow-key);
 
   &:hover {
-    background-color: var(--hover-key-#{$bg});
+    background-color: var(--#{$bg}-hover-key);
+  }
+}
+
+@mixin themes() {
+  @each $theme in $themes {
+    .theme#{$theme} {
+      @content;
+    }
   }
 }

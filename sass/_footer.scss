@@ -11,7 +11,14 @@
     font-style: italic;
 
     &:hover {
-      text-decoration: 4px underline var(--bg-key-red);
+      text-decoration: 4px underline var(--tertiary-bg-key);
     }
+  }
+}
+
+.theme2,
+.theme3 {
+  .attribution {
+    color: var(--secondary-txt);
   }
 }

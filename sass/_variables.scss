@@ -3,25 +3,25 @@
 $padding: mixins.rem(32);
 
 :root {
-  /* Colors - Theme 1*/
-  --bg-main-dark-blue: hsl(222, 26%, 31%);
-  --bg-keypad-dark-blue: hsl(223, 31%, 20%);
-  --bg-screen-dark-blue: hsl(224, 36%, 15%);
+  /* Colors - Theme 1 */
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-keypad: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
 
-  --bg-key-dark-blue: hsl(225, 21%, 49%);
-  --shadow-key-dark-blue: hsl(224, 28%, 35%);
-  --hover-key-dark-blue: hsl(224, 51%, 76%);
+  --primary-bg-key: hsl(30, 25%, 89%);
+  --primary-shadow-key: hsl(28, 16%, 65%);
+  --primary-hover-key: hsl(0, 0%, 100%);
 
-  --bg-key-red: hsl(6, 63%, 50%);
-  --shadow-key-red: hsl(6, 70%, 34%);
-  --hover-key-red: hsl(6, 93%, 67%);
+  --secondary-bg-key: hsl(225, 21%, 49%);
+  --secondary-shadow-key: hsl(224, 28%, 35%);
+  --secondary-hover-key: hsl(224, 51%, 76%);
 
-  --bg-key-grayish-orange: hsl(30, 25%, 89%);
-  --shadow-key-grayish-orange: hsl(28, 16%, 65%);
-  --hover-key-grayish-orange: hsl(0, 0%, 100%);
+  --tertiary-bg-key: hsl(6, 63%, 50%);
+  --tertiary-shadow-key: hsl(6, 70%, 34%);
+  --tertiary-hover-key: hsl(6, 93%, 67%);
 
-  --txt-dark-blue: hsl(221, 14%, 31%);
-  --txt-white: hsl(0, 0%, 100%);
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(221, 14%, 31%);
 
   /* Typography */
   --primary-font-family: "League Spartan", sans-serif;
@@ -29,4 +29,49 @@ $padding: mixins.rem(32);
 
   --padding-container: #{$padding};
   --border-radius: 10px;
+}
+
+.theme2 {
+  /* Colors - Theme 2 */
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-keypad: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+
+  --primary-bg-key: hsl(45, 7%, 89%);
+  --primary-shadow-key: hsl(35, 11%, 61%);
+  --primary-hover-key: hsl(0, 0%, 100%);
+
+  --secondary-bg-key: hsl(185, 42%, 37%);
+  --secondary-shadow-key: hsl(185, 58%, 25%);
+  --secondary-hover-key: hsl(185, 41%, 56%);
+
+  --tertiary-bg-key: hsl(25, 98%, 40%);
+  --tertiary-shadow-key: hsl(25, 99%, 27%);
+  --tertiary-hover-key: hsl(25, 100%, 61%);
+
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(60, 10%, 19%);
+}
+
+.theme3 {
+  /* Colors - Theme 3 */
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-keypad: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%);
+
+  --primary-bg-key: hsl(268, 47%, 21%);
+  --primary-shadow-key: hsl(290, 70%, 36%);
+  --primary-hover-key: hsl(268, 54%, 44%);
+
+  --secondary-bg-key: hsl(281, 89%, 26%);
+  --secondary-shadow-key: hsl(285, 91%, 52%);
+  --secondary-hover-key: hsl(280, 56%, 44%);
+
+  --tertiary-bg-key: hsl(176, 100%, 44%);
+  --tertiary-shadow-key: hsl(177, 92%, 70%);
+  --tertiary-hover-key: hsl(177, 100%, 79%);
+
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(52, 100%, 62%);
+  --tertiary-txt: hsl(198, 20%, 13%);
 }

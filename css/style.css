@@ -1,24 +1,61 @@
 :root {
-  /* Colors - Theme 1*/
-  --bg-main-dark-blue: hsl(222, 26%, 31%);
-  --bg-keypad-dark-blue: hsl(223, 31%, 20%);
-  --bg-screen-dark-blue: hsl(224, 36%, 15%);
-  --bg-key-dark-blue: hsl(225, 21%, 49%);
-  --shadow-key-dark-blue: hsl(224, 28%, 35%);
-  --hover-key-dark-blue: hsl(224, 51%, 76%);
-  --bg-key-red: hsl(6, 63%, 50%);
-  --shadow-key-red: hsl(6, 70%, 34%);
-  --hover-key-red: hsl(6, 93%, 67%);
-  --bg-key-grayish-orange: hsl(30, 25%, 89%);
-  --shadow-key-grayish-orange: hsl(28, 16%, 65%);
-  --hover-key-grayish-orange: hsl(0, 0%, 100%);
-  --txt-dark-blue: hsl(221, 14%, 31%);
-  --txt-white: hsl(0, 0%, 100%);
+  /* Colors - Theme 1 */
+  --bg-main: hsl(222, 26%, 31%);
+  --bg-keypad: hsl(223, 31%, 20%);
+  --bg-screen: hsl(224, 36%, 15%);
+  --primary-bg-key: hsl(30, 25%, 89%);
+  --primary-shadow-key: hsl(28, 16%, 65%);
+  --primary-hover-key: hsl(0, 0%, 100%);
+  --secondary-bg-key: hsl(225, 21%, 49%);
+  --secondary-shadow-key: hsl(224, 28%, 35%);
+  --secondary-hover-key: hsl(224, 51%, 76%);
+  --tertiary-bg-key: hsl(6, 63%, 50%);
+  --tertiary-shadow-key: hsl(6, 70%, 34%);
+  --tertiary-hover-key: hsl(6, 93%, 67%);
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(221, 14%, 31%);
   /* Typography */
   --primary-font-family: "League Spartan", sans-serif;
   --normal-weight: 700;
   --padding-container: 2rem;
   --border-radius: 10px;
+}
+
+.theme2 {
+  /* Colors - Theme 2 */
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-keypad: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+  --primary-bg-key: hsl(45, 7%, 89%);
+  --primary-shadow-key: hsl(35, 11%, 61%);
+  --primary-hover-key: hsl(0, 0%, 100%);
+  --secondary-bg-key: hsl(185, 42%, 37%);
+  --secondary-shadow-key: hsl(185, 58%, 25%);
+  --secondary-hover-key: hsl(185, 41%, 56%);
+  --tertiary-bg-key: hsl(25, 98%, 40%);
+  --tertiary-shadow-key: hsl(25, 99%, 27%);
+  --tertiary-hover-key: hsl(25, 100%, 61%);
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(60, 10%, 19%);
+}
+
+.theme3 {
+  /* Colors - Theme 3 */
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-keypad: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%);
+  --primary-bg-key: hsl(268, 47%, 21%);
+  --primary-shadow-key: hsl(290, 70%, 36%);
+  --primary-hover-key: hsl(268, 54%, 44%);
+  --secondary-bg-key: hsl(281, 89%, 26%);
+  --secondary-shadow-key: hsl(285, 91%, 52%);
+  --secondary-hover-key: hsl(280, 56%, 44%);
+  --tertiary-bg-key: hsl(176, 100%, 44%);
+  --tertiary-shadow-key: hsl(177, 92%, 70%);
+  --tertiary-hover-key: hsl(177, 100%, 79%);
+  --primary-txt: hsl(0, 0%, 100%);
+  --secondary-txt: hsl(52, 100%, 62%);
+  --tertiary-txt: hsl(198, 20%, 13%);
 }
 
 /* --- RESET --- */
@@ -36,6 +73,7 @@
   border: 0;
   box-sizing: border-box;
   vertical-align: baseline;
+  transition: background-color 0.2s;
 }
 
 *::before,
@@ -134,10 +172,11 @@ svg {
 
 body {
   min-height: 100vh;
-  background-color: var(--bg-main-dark-blue);
+  background-color: var(--bg-main);
   font-size: 100%;
   font-family: var(--primary-font-family);
-  color: var(--txt-white);
+  color: var(--primary-txt);
+  cursor: default;
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
@@ -211,7 +250,7 @@ body {
   gap: 0.4rem;
 }
 .toggle__container--bg {
-  background-color: var(--bg-keypad-dark-blue);
+  background-color: var(--bg-keypad);
   border-radius: 1.25rem;
   overflow: hidden;
 }
@@ -226,30 +265,43 @@ body {
   transition: background-color 0.2s;
 }
 .toggle__radio:checked {
-  background-color: var(--bg-key-red);
+  background-color: var(--tertiary-bg-key);
 }
 .toggle__radio:checked:hover {
-  background-color: var(--hover-key-red);
+  background-color: var(--tertiary-hover-key);
+}
+
+.theme2 .header {
+  color: var(--secondary-txt);
+}
+
+.theme3 .header {
+  color: var(--secondary-txt);
 }
 
 .screen {
   width: 100%;
   padding: var(--padding-container);
   border-radius: var(--border-radius);
-  background-color: var(--bg-screen-dark-blue);
+  background-color: var(--bg-screen);
   text-align: end;
   font-size: 4rem;
   outline: none;
 }
-.screen::placeholder {
-  color: var(--txt-dark-blue);
+
+.theme2 .screen {
+  color: var(--secondary-txt);
+}
+
+.theme3 .screen {
+  color: var(--secondary-txt);
 }
 
 .keys {
   width: 100%;
   padding: var(--padding-container);
   border-radius: var(--border-radius);
-  background-color: var(--bg-keypad-dark-blue);
+  background-color: var(--bg-keypad);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
@@ -267,39 +319,48 @@ body {
   font-weight: var(--normal-weight);
   cursor: pointer;
   user-select: none;
-  transition: background-color 0.2s;
+  transition: 0.2s;
+}
+.keys__number:active, .keys__delete:active, .keys__operator:active, .keys__decimal:active, .keys__reset:active, .keys__equal:active {
+  height: 95%;
+  box-shadow: none;
+  align-self: flex-end;
 }
 .keys__number, .keys__operator, .keys__decimal {
-  background-color: var(--bg-key-grayish-orange);
-  color: var(--txt-dark-blue);
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-grayish-orange);
+  background-color: var(--primary-bg-key);
+  color: var(--secondary-txt);
+  box-shadow: inset 0 -0.3rem 0 var(--primary-shadow-key);
 }
 .keys__number:hover, .keys__operator:hover, .keys__decimal:hover {
-  background-color: var(--hover-key-grayish-orange);
+  background-color: var(--primary-hover-key);
 }
 .keys__delete, .keys__reset {
-  background-color: var(--bg-key-dark-blue);
-  color: var(--txt-white);
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-dark-blue);
+  background-color: var(--secondary-bg-key);
+  color: var(--primary-txt);
+  box-shadow: inset 0 -0.3rem 0 var(--secondary-shadow-key);
   text-transform: uppercase;
   font-size: 1.5rem;
 }
 .keys__delete:hover, .keys__reset:hover {
-  background-color: var(--hover-key-dark-blue);
+  background-color: var(--secondary-hover-key);
 }
 .keys__reset {
   grid-column: 1/3;
   grid-row: 5;
 }
 .keys__equal {
-  background-color: var(--bg-key-red);
-  color: var(--txt-white);
-  box-shadow: inset 0 -0.3rem 0 var(--shadow-key-red);
+  background-color: var(--tertiary-bg-key);
+  color: var(--primary-txt);
+  box-shadow: inset 0 -0.3rem 0 var(--tertiary-shadow-key);
   grid-column: 3/5;
   grid-row: 5;
 }
 .keys__equal:hover {
-  background-color: var(--hover-key-red);
+  background-color: var(--tertiary-hover-key);
+}
+
+.theme3 .keys__equal {
+  color: var(--tertiary-txt);
 }
 
 .footer {
@@ -315,7 +376,12 @@ body {
   font-style: italic;
 }
 .attribution__link:hover {
-  text-decoration: 4px underline var(--bg-key-red);
+  text-decoration: 4px underline var(--tertiary-bg-key);
+}
+
+.theme2 .attribution,
+.theme3 .attribution {
+  color: var(--secondary-txt);
 }
 
 /*# sourceMappingURL=style.css.map */
